@@ -1,0 +1,60 @@
+body{
+    font-family: monospace;
+    margin : 0;
+    padding: 0;
+    background-color: lightblue;
+}
+
+h1{
+    color: rgb(0, 0, 0);
+    text-align: center;
+    background-color: turquoise;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 400px;
+    margin: auto;
+}
+
+p{
+    color: black;
+    text-align: justify;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 30px;
+    width: 350px;
+    border-color: black;
+    border: 1px solid;
+}
+
+h2{
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+.dica{
+    background-color: lightgray;
+    border: 1px solid #3a3939;
+    border-radius: 10px;
+    width: 250px;
+    height: 180px;
+    text-align: center;
+    margin: auto;
+    margin-right: 50px;
+    text-align: justify;
+    margin-top: -300px;
+}
+
+.p1{
+    width: 200px;
+    margin: auto;
+    height: 100px;
+    margin-top: -5px;
+}
+
+h3{
+    margin: 30px;
+}
+
+
