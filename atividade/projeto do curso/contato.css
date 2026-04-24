@@ -1,0 +1,160 @@
+body{
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', sans-serif;
+        box-sizing: border-box;
+    }
+    
+    .Logo{
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+        display: flex;
+    }
+
+    header{
+        display: flex;
+        background-color: blueviolet;
+        justify-content: space-between;
+        padding: 5px;
+        border-radius: 1px;
+        flex-wrap: wrap;
+    }
+
+    
+    
+
+    .nav{
+        display: flex;
+        align-items: center;
+    }
+
+    h1{
+        color: gold;
+        margin-right: 50px;
+        font-family: "Pacifico";
+    }
+
+    .back-nav{
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    .back-link{
+        color: blueviolet;
+        font-size: 18px;
+        text-decoration: none;
+        padding: 10px 20px;
+        border: 2px solid blueviolet;
+        border-radius: 5px;
+        transition: all 0.2s ease;
+    }
+
+    .back-link:hover{
+        background-color: blueviolet;
+        color: white;
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    form .form-group{
+        margin-bottom: 15px;
+    }
+
+    .form-group{
+        display: flex;
+        flex-direction: column;
+        color: blueviolet;
+    }
+
+    .rua-numero-row{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 15px;
+        align-items: flex-start;
+    }
+
+    .field-group{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .small-field{
+        min-width: 120px;
+    }
+
+    .rua-numero-row label,
+    .form-group label{
+        margin-bottom: 5px;
+    }
+
+    .rua-numero-row input,
+    .form-group input{
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    input:hover{
+        border-color: blueviolet;
+    }
+
+    input:focus{
+        border-color: blueviolet;
+        outline: none;
+    }
+
+    button{
+        padding: 10px;
+        background-color: blueviolet;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    button:hover{
+        background-color: #45a049;
+    }
+
+    .contact-section{
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .order-total-box{
+        display: inline-block;
+        background: linear-gradient(135deg, #8f40ff 0%, #d571ff 100%);
+        color: #930098;
+        padding: 12px 18px;
+        border-radius: 8px;
+        margin: 18px auto 0;
+        font-weight: 700;
+        min-width: 220px;
+    }
+
+    .order-total-box p{
+        margin: 0;
+        line-height: 1.4;
+    }
+
+    .quantity-section{
+        text-align: center;
+        margin-top: 30px;
+        background: linear-gradient(180deg, #dec4fa 0%, #ffffff 100%)
+    }
+
+    h2{
+        color: #8f40ff;
+        font-weight: 700;
+    }
+
+    p{
+        color: #5d4b75;
+        line-height: 1.6;
+    }

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <title>Açaieria +Açai</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+        <div class="logo-section">
+            <img class="Logo" src="https://s3-sa-east-1.amazonaws.com/projetos-artes/fullsize/2019/02/28/17/Logo-253716_341712_173106804_1653267716.jpg" alt="logo">
+            <h1>AÇAÍTERIA +AÇAÍ</h1>
+        </div>
+        
+    </header>
+    
+    <main>
+        <section class="intro">
+            <h2>Sabores do Açaí</h2>
+            <p>Escolha entre nossos sabores prontos ou monte o seu próprio açaí com acompanhamentos deliciosos.</p>
+        </section>
+
+        <section class="card-grid">
+            <article class="card">
+                <h3>Açaí Tradicional</h3>
+                <p>500ml de açaí cremoso com leite condensado.</p>
+                <span data-price="19.90">R$ 19,90</span>
+                <div class="quantity-controls">
+                    <button class="qty-btn minus">-</button>
+                    <input type="number" value="0" min="0" class="qty-input">
+                    <button class="qty-btn plus">+</button>
+                </div>
+            </article>
+            <article class="card">
+                <h3>Açaí com Banana</h3>
+                <p>500ml de açaí com banana fatiada e granola crocante.</p>
+                <span data-price="22.90">R$ 22,90</span>
+                <div class="quantity-controls">
+                    <button class="qty-btn minus">-</button>
+                    <input type="number" value="0" min="0" class="qty-input">
+                    <button class="qty-btn plus">+</button>
+                </div>
+            </article>
+            <article class="card">
+                <h3>Açaí Tropical</h3>
+                <p>500ml de açaí com morango, kiwi e mel.</p>
+                <span data-price="24.90">R$ 24,90</span>
+                <div class="quantity-controls">
+                    <button class="qty-btn minus">-</button>
+                    <input type="number" value="0" min="0" class="qty-input">
+                    <button class="qty-btn plus">+</button>
+                </div>
+            </article>
+        </section>
+
+        <section class="order-section">
+            <button id="finish-order">Terminar o pedido</button>
+        </section>
+
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Função para atualizar quantidade
+            function updateQuantity(card, change) {
+                const input = card.querySelector('.qty-input');
+                let value = parseInt(input.value) + change;
+                if (value < 0) value = 0;
+                input.value = value;
+            }
+
+            // Adicionar event listeners aos botões de quantidade
+            document.querySelectorAll('.qty-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const card = this.closest('.card');
+                    const change = this.classList.contains('plus') ? 1 : -1;
+                    updateQuantity(card, change);
+                });
+            });
+
+            // Botão terminar pedido
+            document.getElementById('finish-order').addEventListener('click', function() {
+                let total = 0;
+                document.querySelectorAll('.card').forEach(card => {
+                    const price = parseFloat(card.querySelector('span').dataset.price);
+                    const qty = parseInt(card.querySelector('.qty-input').value);
+                    total += price * qty;
+                });
+                if (total > 0) {
+                    window.location.href = 'contato.html?total=' + total.toFixed(2);
+                } else {
+                    alert('Selecione pelo menos um item!');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
